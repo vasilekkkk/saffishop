@@ -1,0 +1,122 @@
+body {
+  overflow-x: hidden;
+}
+.page {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-family: "Handjet";
+  overflow-x: hidden;
+}
+.page .house {
+  position: absolute;
+  bottom: 0;
+  right: -250px;
+  z-index: -1;
+  height: 1170px;
+}
+.page .info_wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+.page .info_wrapper .flowers {
+  margin-top: 85px;
+  width: 70%;
+}
+
+.page .message {
+  background: #fffcfc4d;
+  border-radius: 25.4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 22px;
+  color: white;
+  font-family: "Manrope";
+  padding-left: 60px;
+  height: 168px;
+  width: 708px;
+  display: flex;
+  align-items: center;
+}
+.page .message_container {
+  position: relative;
+}
+.page .message_container.one {
+  margin-left: 450px;
+}
+
+.page .message_container.two {
+  margin-top: 130px;
+  margin-left: 320px;
+}
+.page .message_container .sphere {
+  position: absolute;
+  left: -110px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.page .messages {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+/* контейнер для прокрутки */
+.renders {
+  overflow: hidden;
+  width: 100%; /* или заданная ширина */
+  box-sizing: border-box;
+}
+.renders .render {
+  width: 1000px;
+  height: fit-content;
+}
+.renders .render.center {
+}
+/* внутренний блок, который будет двигаться */
+.renders .slides-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px; /* расстояние между изображениями */
+  /* задаем анимацию по умолчанию */
+  animation: scroll-left 40s linear infinite;
+  /* чтобы остановить анимацию при наведении */
+  transition: animation-play-state 0.3s ease;
+  animation-play-state: paused;
+}
+
+/* остановить анимацию при наведении */
+.renders:hover .slides-wrapper {
+  animation-play-state: running;
+}
+
+/* если хотите движение вправо, добавьте класс .left-to-right и используйте другую анимацию */
+.left-to-right .slides-wrapper {
+  animation: scroll-right 40s linear infinite;
+}
+
+/* остановить при наведении */
+.left-to-right:hover .slides-wrapper {
+  animation-play-state: paused;
+}
+
+/* ключевые кадры для прокрутки слева направо */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ключевые кадры для прокрутки справа налево */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

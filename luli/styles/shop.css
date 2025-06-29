@@ -1,0 +1,95 @@
+.page {
+  width: 100%;
+  padding: 10px;
+  padding-top: 50px;
+}
+.page .items {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.page .items .item {
+  display: flex;
+  gap: 20px; /* уменьшил gap для лучшей адаптивности */
+  background: #ffffff4d;
+  border-radius: 30px;
+  padding-right: 20px;
+  min-width: 0; /* чтобы flex-элементы могли сжиматься */
+  overflow: hidden;
+}
+.page .items .item .picture {
+  position: relative;
+  width: 50%;
+}
+.page .items .item .picture img {
+  width: 100%;
+  height: 100%;
+}
+.page .items .item .picture .price {
+  font-size: 50px;
+  color: #ffffff;
+  background: #ffffff4d;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  width: 207px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+}
+.page .items .item .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 40px 0px;
+  width: 50%;
+}
+.page .items .item .info .top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.page .items .item .info .title {
+  font-size: 40px;
+}
+.page .items .item .info .desc {
+  font-size: 18px;
+  font-family: "Manrope";
+}
+.page .items .item .info .btns {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.page .items .item .info .btns .btn {
+  font-size: 38px;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.page .items .item .info .btns .btn.buy {
+  border: 4px solid #ffffff;
+}
+.page .items .item .info .btns .btn.cart {
+  background: #934bbd;
+}
+
+@media (max-width: 1000px) {
+  .page .items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
