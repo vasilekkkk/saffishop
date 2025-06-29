@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/poster.css" />
+    <script src="./scripts/poster.js" defer></script>
+    <script src="./scripts/navbar.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left">
+        <img src="./svgs/s.svg" class="s" />
+        <a href="./about.html" class="link">Про нас</a>
+        <a href="./shop.html" class="link">Магазин</a>
+        <a href="./workshop.html" class="link">Мастерсая</a>
+        <a href="./poster.html" class="link">Афиша</a>
+      </div>
+      <div class="title">Афиша</div>
+
+      <a href="./cart.html">
+        <img src="./svgs/cart.svg" class="cart" />
+      </a>
+    </div>
+    <div class="page">
+      <div class="scroll-container left-to-right posters">
+        <div class="scroll-content">
+          <img src="./svgs/post/1.svg" class="poster" />
+          <img src="./svgs/post/2.svg" class="poster" />
+          <img src="./svgs/post/3.svg" class="poster" />
+          <!-- Дублируем для бесшовной прокрутки -->
+          <img src="./svgs/post/1.svg" class="poster" />
+          <img src="./svgs/post/2.svg" class="poster" />
+          <img src="./svgs/post/3.svg" class="poster" />
+        </div>
+      </div>
+
+      <div class="scroll-container right-to-left posters">
+        <div class="scroll-content">
+          <img src="./svgs/post/4.svg" class="poster" />
+          <img src="./imgs/poster/Group 362.png" class="poster" />
+          <img src="./svgs/post/4.svg" class="poster" />
+          <img src="./imgs/poster/Group 362.png" class="poster" />
+        </div>
+      </div>
+    </div>
+    <div class="poster-overlay" id="posterOverlay">
+      <div class="poster-container">
+        <img src="" alt="Expanded poster" />
+        <div class="poster-caption"></div>
+      </div>
+    </div>
+  </body>
+</html>
