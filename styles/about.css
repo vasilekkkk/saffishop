@@ -1,0 +1,101 @@
+.page {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-family: "Handjet";
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.message {
+  font-size: 34px;
+  color: white;
+  background: #ffffff4d;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  padding-top: 5px;
+  padding-left: 40px;
+  padding-right: 80px;
+
+  border-top-right-radius: 25.4px;
+  border-bottom-right-radius: 25.4px;
+}
+.info .saffi {
+  font-size: 80px;
+}
+.more_info {
+  padding: 0 20px;
+}
+.more_info .subtitle {
+  font-size: 40px;
+  color: white;
+}
+.spheres {
+  display: flex;
+  justify-content: space-between;
+}
+.spheres .sphere {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  width: 32%;
+}
+.spheres .sphere img {
+  width: 100%;
+}
+.spheres .sphere.second .title {
+  color: black;
+}
+.spheres .sphere:last-child .title {
+  margin-left: 20px;
+}
+.spheres .sphere .title {
+  font-size: 64px;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.spheres .sphere .bg {
+  filter: blur(50px);
+  background: #934bbdc9;
+  border-radius: 55%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.contacts {
+  background: #ffffff4d;
+  height: 176px;
+  padding: 15px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contacts .title {
+  font-size: 38px;
+  color: #934bbd;
+}
+.contacts .contact {
+  font-size: 24px;
+  color: white;
+}
+@media (max-width: 1024px) {
+  .spheres {
+    align-items: center;
+    flex-direction: column;
+  }
+}

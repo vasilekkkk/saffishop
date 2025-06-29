@@ -1,0 +1,56 @@
+.page {
+  width: 100%;
+}
+body {
+  overflow: hidden;
+}
+.flower {
+  position: absolute;
+  bottom: -13%;
+  left: 27%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.flower .text {
+  color: white;
+  font-size: 40px;
+  font-family: "Handjet";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-decoration: none;
+}
+.flower img {
+  width: 54%;
+}
+.flower .bg {
+  position: absolute;
+  top: 0;
+
+  background-color: #3235e6;
+  border-radius: 55%;
+  z-index: -1;
+  width: 70%;
+  height: 1048px;
+  filter: blur(300px);
+}
+.snow {
+  position: absolute;
+  left: 20px;
+  height: 60%;
+  top: 10%;
+}
+.sun {
+  position: absolute;
+  left: 20%;
+  bottom: 0px;
+  height: 30%;
+}
+.cookie {
+  position: absolute;
+  left: 30%;
+  top: 20%;
+  height: 30%;
+}

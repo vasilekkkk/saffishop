@@ -1,0 +1,63 @@
+.wrapper {
+  overflow-y: hidden;
+}
+.ring {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+}
+.ring img {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 70%;
+  z-index: -1;
+}
+.ring .text {
+  font-size: 30vh;
+  font-family: "Sarina";
+  color: white;
+
+  position: absolute;
+  bottom: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: color 0.3s ease; /* плавный переход цвета за 0.3 секунды */
+}
+.ring .text:hover {
+  color: #ff69b4; /* розовый цвет при наведении */
+}
+.message {
+  border-radius: 25.4px;
+  background: #fffcfc4d;
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  font-family: "PadyakkeExpandedOne";
+  width: fit-content;
+  z-index: 1;
+}
+.message.left {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  position: absolute;
+  padding-left: 50px;
+  bottom: 25%;
+  left: 0px;
+}
+.message.right {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  position: absolute;
+  bottom: 15%;
+  right: 0px;
+  padding-right: 60px;
+}
+/* 1047.62 */

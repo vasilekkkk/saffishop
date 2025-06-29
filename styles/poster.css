@@ -1,0 +1,128 @@
+.page {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.page .posters {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+}
+.page .posters .poster {
+  height: 380px;
+}
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* или нужная ширина */
+  box-sizing: border-box;
+  border: 1px solid transparent; /* для отладки можно убрать */
+}
+
+.scroll-content {
+  display: inline-flex;
+  gap: 20px; /* расстояние между изображениями */
+  /* ширина зависит от контента */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: scroll-left; /* по умолчанию */
+  animation-duration: 40s; /* скорость прокрутки */
+}
+
+/* анимация слева направо */
+.left-to-right .scroll-content {
+  animation-name: scroll-right;
+}
+
+/* анимация справа налево */
+.right-to-left .scroll-content {
+  animation-name: scroll-left;
+}
+
+/* ключевые кадры для прокрутки слева направо */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* ключевые кадры для прокрутки справа налево */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* стили для изображений */
+.poster {
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Оверлей, изначально скрыт */
+.poster-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 71px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Когда активен */
+.poster-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.poster-overlay img {
+  max-height: 90%;
+  border-radius: 8px;
+  user-select: none;
+}
+.poster-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  width: 100%;
+}
+
+.poster-container img {
+  width: 100%;
+  border-radius: 8px;
+  user-select: none;
+}
+
+.poster-caption {
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff4d;
+  height: 45px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 10px 40px;
+}
